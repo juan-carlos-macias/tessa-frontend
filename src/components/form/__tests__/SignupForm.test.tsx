@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { render, screen, waitFor } from '@/__tests__/utils/test-utils'
 import userEvent from '@testing-library/user-event'
 import { SignupForm } from '../SignupForm'
 import * as authModule from '@/lib/firebase/auth'
 import * as safeAsyncModule from '@/utils/safeAsync/safeAsync'
 
-// Mock the modules
 jest.mock('@/lib/firebase/auth')
 jest.mock('@/utils/safeAsync/safeAsync')
 
