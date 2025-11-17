@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { render, screen, waitFor } from '@/__tests__/utils/test-utils'
 import userEvent from '@testing-library/user-event'
 import { LoginForm } from '../LoginForm'
 import * as authModule from '@/lib/firebase/auth'
 import * as safeAsyncModule from '@/utils/safeAsync/safeAsync'
 
-// Mock the modules
 jest.mock('@/lib/firebase/auth')
 jest.mock('@/utils/safeAsync/safeAsync')
 
@@ -16,7 +17,6 @@ describe('LoginForm', () => {
   beforeEach(() => {
     jest.clearAllMocks()
     
-    // Mock window.location
     delete (window as any).location
     window.location = { href: '' } as any
     
